@@ -61,3 +61,5 @@ importd
 importd-repo/
 sella/importd/
 sella/secret.txt
+sella/db.sqlite
+

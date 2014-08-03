@@ -15,6 +15,7 @@ d(
 
         'sella',
         'demo',
+        'api',
     ),
     # django-jinja
     DEFAULT_JINJA2_TEMPLATE_EXTENSION='.jinja2',
@@ -29,7 +30,7 @@ d(
     # django-nose
     TEST_RUNNER='django_nose.NoseTestSuiteRunner',
 
-    mounts={"demo": "/demo/"}
+    mounts={"demo": "/demo/", 'rest_framework': '/api/'}
 )
 
 if __name__ == "__main__":

@@ -52,3 +52,12 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
+# PyCharm
+.idea
+
+
+# external library
+importd
+importd-repo/
+sella/importd/
+sella/secret.txt

@@ -8,7 +8,7 @@ django-jinja==1.0.3
 django-tools==0.25.1
 nose==1.3.3
 django-nose==1.2
-git+https://github.com/if1live/importd.git
+git+https://github.com/if1live/importd.git@feature/debug-toolbar
 fhurl>=0.1.7
 gunicorn
 smarturls

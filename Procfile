@@ -1,2 +1,2 @@
-web: gunicorn --chdir sella -w 2 app:d
+web: gunicorn --chdir sella  -t 30 -w 2 app:d
 

@@ -9,8 +9,9 @@ def get_sentry_apps():
     else:
         return ()
 
+DEBUG = True if __name__ == '__main__' else False
 d(
-    DEBUG=True,
+    DEBUG=DEBUG,
     INSTALLED_APPS=(
         # external library
         'django_nose',

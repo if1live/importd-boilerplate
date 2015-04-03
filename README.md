@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/if1live/importd-boilerplate.svg?branch=master)](https://travis-ci.org/if1live/importd-boilerplate)
 
+[![Dependency Status](https://gemnasium.com/if1live/importd-boilerplate.svg)](https://gemnasium.com/if1live/importd-boilerplate)
+
 [importd](https://github.com/amitu/importd) is django based mini framework inspired from sinatra. Fully compatible with django. This repository is boilerplate code for importd.
 
 ## Feature

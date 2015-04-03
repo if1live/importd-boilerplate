@@ -1,6 +1,13 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
 from importd import d
+import os
+
+def get_sentry_apps():
+    if 'SENTRY_DSN' in os.environ:
+        return ('raven.contrib.django.raven_compat',)
+    else:
+        return ()
 
 d(
     DEBUG=True,
@@ -15,7 +22,7 @@ d(
         'sella',
         'demo',
         'api',
-    ),
+    ) + get_sentry_apps(),
     # django-jinja
     DEFAULT_JINJA2_TEMPLATE_EXTENSION='.jinja2',
     TEMPLATE_LOADERS=(
@@ -28,6 +35,10 @@ d(
     ),
     # django-nose
     TEST_RUNNER='django_nose.NoseTestSuiteRunner',
+    # sentry
+    RAVEN_CONFIG={
+        'dsn': os.environ['SENTRY_DSN'] if 'SENTRY_DSN' in os.environ else '',
+    },
 
     mounts={"demo": "/demo/", 'rest_framework': '/api/'}
 )

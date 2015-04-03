@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #-*- coding: utf-8 -*-
 from importd import d
 
@@ -5,8 +6,6 @@ d(
     DEBUG=True,
     INSTALLED_APPS=(
         # external library
-        'django_extensions',
-        'django_jinja',
         'django_nose',
 
         # django rest framework
@@ -35,5 +34,3 @@ d(
 
 if __name__ == "__main__":
     d.main()
-
-

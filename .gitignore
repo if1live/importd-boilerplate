@@ -55,6 +55,7 @@ docs/_build/
 # PyCharm
 .idea
 
+.DS_Store
 
 # external library
 importd

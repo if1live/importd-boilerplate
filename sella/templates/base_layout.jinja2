@@ -1,0 +1,16 @@
+{% extends 'metro_layout.jinja2' %}
+{% block body_content %}
+    <h1>
+        <a href="/">importd-boilerplate</a>
+    </h1>
+    
+    <nav class="horizontal-menu">
+        <ul>
+            <li><a href="{{ url('demo.index') }}">demo</a></li>
+            <li><a href="{{ url('sella.views.view_restful_api') }}">restful-api</a></li>
+        </ul>
+    </nav>
+{% block content %}
+{% endblock %}
+
+{% endblock %}

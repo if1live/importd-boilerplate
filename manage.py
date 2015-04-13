@@ -14,6 +14,7 @@ if 'gunicorn' in sys.argv[0]:
     DEBUG = False
 else:
     DEBUG = True
+DEBUG=True
 
 d(
     DEBUG=DEBUG,

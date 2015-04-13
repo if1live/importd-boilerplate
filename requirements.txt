@@ -1,4 +1,5 @@
-importd==0.3.3
+#importd==0.3.3
+git+https://github.com/if1live/importd.git@feature/heroku-support
 django==1.7.7
 django-debug-toolbar==1.3
 djangorestframework==3.1.1
@@ -11,4 +12,5 @@ nose==1.3.4
 django-nose==1.3
 raven==5.2.0
 gunicorn
-
+dj-static==0.0.6
+whitenoise==1.0.6

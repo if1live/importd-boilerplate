@@ -2,6 +2,7 @@
 #-*- coding: utf-8 -*-
 from importd import d
 import os
+import sys
 
 def get_sentry_apps():
     if 'SENTRY_DSN' in os.environ:
@@ -9,7 +10,10 @@ def get_sentry_apps():
     else:
         return ()
 
-DEBUG = False
+if 'gunicorn' in sys.argv[0]:
+    DEBUG = False
+else:
+    DEBUG = True
 
 d(
     DEBUG=DEBUG,
@@ -41,7 +45,9 @@ d(
     RAVEN_CONFIG={
         'dsn': os.environ['SENTRY_DSN'] if 'SENTRY_DSN' in os.environ else '',
     },
-    ADMINS=(),
+    # '*' or '127.0.0.1'
+    ALLOWED_HOSTS=['127.0.0.1'],
+
     mounts={"demo": "/demo/", 'rest_framework': '/api/'}
 )
 

@@ -9,7 +9,8 @@ def get_sentry_apps():
     else:
         return ()
 
-DEBUG = True if __name__ == '__main__' else False
+DEBUG = False
+
 d(
     DEBUG=DEBUG,
     INSTALLED_APPS=(
@@ -40,7 +41,7 @@ d(
     RAVEN_CONFIG={
         'dsn': os.environ['SENTRY_DSN'] if 'SENTRY_DSN' in os.environ else '',
     },
-
+    ADMINS=(),
     mounts={"demo": "/demo/", 'rest_framework': '/api/'}
 )
 

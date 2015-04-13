@@ -14,7 +14,6 @@ if 'gunicorn' in sys.argv[0]:
     DEBUG = False
 else:
     DEBUG = True
-DEBUG=True
 
 d(
     DEBUG=DEBUG,
@@ -46,8 +45,11 @@ d(
     RAVEN_CONFIG={
         'dsn': os.environ['SENTRY_DSN'] if 'SENTRY_DSN' in os.environ else '',
     },
+
+    # for heroku deploy
     # '*' or '127.0.0.1'
     ALLOWED_HOSTS=['127.0.0.1'],
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend',
 
     mounts={"demo": "/demo/", 'rest_framework': '/api/'}
 )

@@ -7,6 +7,7 @@ install: pip install -r requirements.txt
 before_script: rm --recursive --force --verbose *.pyc
 
 script:
+  - python manage.py collectstatic --noinput
   - python manage.py test --exe
 
 notifications:

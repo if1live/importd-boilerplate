@@ -46,10 +46,13 @@ d(
         'dsn': os.environ['SENTRY_DSN'] if 'SENTRY_DSN' in os.environ else '',
     },
 
+    # whitenoise + gzip
+    STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage',
+
     # for heroku deploy
     # '*' or '127.0.0.1' or 'importd-boilerplate.herokuapp.com'
     ALLOWED_HOSTS=['*'],
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend',
+    EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend',
 
     mounts={"demo": "/demo/", 'rest_framework': '/api/'}
 )

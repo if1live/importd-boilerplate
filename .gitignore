@@ -60,8 +60,9 @@ docs/_build/
 # external library
 importd
 importd-repo/
-sella/importd/
-sella/secret.txt
-sella/db.sqlite
-sella/staticfiles/
+
+.venv
+secret.txt
+db.sqlite
+staticfiles/
 
